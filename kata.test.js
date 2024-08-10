@@ -22,9 +22,10 @@ describe('tests for adding books', () => {
     })
 })
 
+
 // Tests for borrowing books
 describe('tests for borrowing books', () => {
     test('should borrow a book if it is available', () => {
-        expect(kl.borrowBook(101)).toBe("Book borrowed: Pursuit of Happyness")
+        expect(kl.borrowBook(102)).toBe("Book borrowed: The Guide")
     })
 })

@@ -15,7 +15,7 @@ export class KataLibrary {
             title,
             author,
             year,
-            isBorrowed: false
+            isBorrowed: false,
         }
         if (isbn == "" || title == "" || author == "" || year == "") {
             return "Please enter valid book details"
@@ -28,4 +28,19 @@ export class KataLibrary {
             }
         }
     }
+
+
+    // Borrow books
+    borrowBook(isbn) {
+        for (let book of this.books) {
+            if (book.isbn === isbn && book.isBorrowed == false) {
+                book.isBorrowed = true;
+                return `Book borrowed: ${book.title}`
+            }
+        }
+
+    }
 }
+
+// const kl = new KataLibrary();
+// kl.borrowBook(101);
