@@ -3,6 +3,11 @@ export class KataLibrary {
         this.books = [];
     }
 
+    // Unique ISBN
+    isBookUnique(isbn) {
+        return !this.books.some(book => book.isbn === isbn);
+    }
+
     // Add books
     addBook(isbn, title, author, year, isBorrowed) {
         const book = {
@@ -12,7 +17,12 @@ export class KataLibrary {
             year,
             isBorrowed: false
         }
-        this.books.push(book);
-        return `Book added: ${book.title}`
+
+        if (this.isBookUnique(isbn)) {
+            this.books.push(book);
+            return `Book added: ${book.title}`
+        } else {
+            return `Cannot add book with same isbn number`
+        }
     }
 }
