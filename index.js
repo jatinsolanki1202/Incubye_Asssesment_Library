@@ -17,12 +17,15 @@ export class KataLibrary {
             year,
             isBorrowed: false
         }
-
-        if (this.isBookUnique(isbn)) {
-            this.books.push(book);
-            return `Book added: ${book.title}`
+        if (isbn == "" || title == "" || author == "" || year == "") {
+            return "Please enter valid book details"
         } else {
-            return `Cannot add book with same isbn number`
+            if (this.isBookUnique(isbn)) {
+                this.books.push(book);
+                return `Book added: ${book.title}`
+            } else {
+                return `Cannot add book with same isbn number`
+            }
         }
     }
 }
