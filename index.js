@@ -52,4 +52,12 @@ export class KataLibrary {
         }
         return "No such book is borrowed"
     }
+
+
+    //view Books
+    viewBooks() {
+        for (let book of this.books) {
+            return { isbn: book.isbn, title: book.title, author: book.author, year: book.year }
+        }
+    }
 }
