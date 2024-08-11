@@ -28,4 +28,8 @@ describe('tests for borrowing books', () => {
     test('should borrow a book if it is available', () => {
         expect(kl.borrowBook(102)).toBe("Book borrowed: The Guide")
     })
+
+    test('should show error message if book is not available to borrow', () => {
+        expect(kl.borrowBook(102)).toBe("No such book avalaible to borrow")
+    })
 })
