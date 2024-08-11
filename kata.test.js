@@ -57,7 +57,9 @@ describe('tests for viewing available books', () => {
     })
 
     test('should view only books which are not borrowed', () => {
-        expect(kl.viewBooks()).toEqual({ isbn: 101, title: "Pursuit of Happyness", author: "Chris Gardner", year: 2006 },
+        //borrowing book for test
+        expect(kl.borrowBook(101))
+        expect(kl.viewBooks()).toEqual(
             { isbn: 102, title: "The Guide", author: "RK Narayan", year: 1958 },
             { isbn: 103, title: "The People of the Indus", author: "Nikhl Gulati", year: 2022 })
     })
