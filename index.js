@@ -59,5 +59,6 @@ export class KataLibrary {
         for (let book of this.books) {
             if (!book.isBorrowed) return { isbn: book.isbn, title: book.title, author: book.author, year: book.year }
         }
+        return "No books available"
     }
 }
