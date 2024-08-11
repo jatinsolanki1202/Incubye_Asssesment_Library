@@ -45,3 +45,14 @@ describe('tests for returning books', () => {
         expect(kl.returnBook(101)).toBe("No such book is borrowed")
     })
 })
+
+
+// Tests for Viewing all available books
+describe('tests for viewing available books', () => {
+    test('should view all the books', () => {
+        expect(kl.viewBooks()).toEqual({ isbn: 101, title: "Pursuit of Happyness", author: "Chris Gardner", year: 2006 },
+            { isbn: 102, title: "The Guide", author: "RK Narayan", year: 1958 },
+            { isbn: 103, title: "The People of the Indus", author: "Nikhl Gulati", year: 2022 }
+        )
+    })
+})
