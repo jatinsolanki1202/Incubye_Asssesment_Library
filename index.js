@@ -40,4 +40,15 @@ export class KataLibrary {
         }
         return "No such book avalaible to borrow";
     }
+
+
+    //Return books
+    returnBook(isbn) {
+        for (let book of this.books) {
+            if (book.isbn == isbn && book.isBorrowed == true) {
+                book.isBorrowed = false;
+                return `Book returned: ${book.title}`
+            }
+        }
+    }
 }

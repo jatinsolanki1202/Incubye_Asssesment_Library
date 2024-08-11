@@ -38,6 +38,6 @@ describe('tests for borrowing books', () => {
 // Tests for Returning books
 describe('tests for returning books', () => {
     test('should return a book, if it is borrowed', () => {
-        expect(returnBook(102)).toBe("Book returned: The Guide")
+        expect(kl.returnBook(102)).toBe("Book returned: The Guide")
     })
 })
