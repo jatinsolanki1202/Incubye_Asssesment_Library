@@ -63,4 +63,10 @@ describe('tests for viewing available books', () => {
             { isbn: 102, title: "The Guide", author: "RK Narayan", year: 1958 },
             { isbn: 103, title: "The People of the Indus", author: "Nikhl Gulati", year: 2022 })
     })
+
+    test('should return a message if no book is available', () => {
+        //taking new object for test
+        const kl2 = new KataLibrary()
+        expect(kl2.viewBooks()).toEqual("No books available")
+    })
 })
