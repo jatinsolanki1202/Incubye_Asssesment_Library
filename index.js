@@ -50,5 +50,6 @@ export class KataLibrary {
                 return `Book returned: ${book.title}`
             }
         }
+        return "No such book is borrowed"
     }
 }
