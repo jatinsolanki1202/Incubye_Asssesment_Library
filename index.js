@@ -33,14 +33,11 @@ export class KataLibrary {
     // Borrow books
     borrowBook(isbn) {
         for (let book of this.books) {
-            if (book.isbn === isbn && book.isBorrowed == false) {
+            if (book.isbn == isbn && book.isBorrowed == false) {
                 book.isBorrowed = true;
                 return `Book borrowed: ${book.title}`
             }
         }
-
+        return "No such book avalaible to borrow";
     }
 }
-
-// const kl = new KataLibrary();
-// kl.borrowBook(101);
