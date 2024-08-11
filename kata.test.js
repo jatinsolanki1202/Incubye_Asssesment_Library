@@ -40,4 +40,8 @@ describe('tests for returning books', () => {
     test('should return a book, if it is borrowed', () => {
         expect(kl.returnBook(102)).toBe("Book returned: The Guide")
     })
+
+    test('should show error message if no such book is returned', () => {
+        expect(kl.returnBook(101)).toBe("No such book is borrowed")
+    })
 })
